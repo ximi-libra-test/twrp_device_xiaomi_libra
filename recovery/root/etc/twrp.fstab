@@ -1,6 +1,6 @@
 /boot emmc /dev/block/bootdevice/by-name/boot flags=display="Boot"
 /cache ext4 /dev/block/bootdevice/by-name/cache flags=display="Cache"
-/cust ext4 /dev/block/bootdevice/by-name/cust flags=display="Cust"
+/vendor ext4 /dev/block/bootdevice/by-name/cust flags=display="Vendor"
 /data ext4 /dev/block/bootdevice/by-name/userdata flags=display="Data";encryptable=/dev/block/bootdevice/by-name/bk1
 /efs1 emmc /dev/block/bootdevice/by-name/modemst1 flags=display="EFS"
 /efs2 emmc /dev/block/bootdevice/by-name/modemst2 flags=subpartitionof=/efs1

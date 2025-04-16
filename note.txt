@@ -1,0 +1,4 @@
+this build uses cust as vendor which is a trick from rcky844
+
+
+make sure to use python2 as python and export LC_ALL=C when building
