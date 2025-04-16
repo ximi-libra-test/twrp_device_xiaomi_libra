@@ -1,0 +1,7 @@
+#!/sbin/sh
+for applet in $(/sbin/busybox --list) ; do 
+	# symlink everything but not sh
+	[ ! "$applet" = "sh" ] && ln -sf /sbin/busybox /sbin/$applet
+done
+
+# EOF
