@@ -38,18 +38,9 @@ on post-fs
     mkdir /firmware 0771 system system
     mount vfat /dev/block/bootdevice/by-name/modem /firmware ro shortname=lower dmask=0555 fmask=0555 gid=1000
 
-service symlink-bb /sbin/symlink-bb
-    oneshot
-    disabled
-    user root
-    group root
-    seclabel u:r:recovery:s0
-
 on boot
     setprop sys.usb.config adb
     write /sys/class/leds/lcd-backlight/brightness 255
-    chmod 0777 /sbin/symlink-bb
-    start symlink-bb
 
 service qseecomd /sbin/qseecomd
     oneshot
